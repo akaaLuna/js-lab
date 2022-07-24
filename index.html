@@ -1,0 +1,95 @@
+<html>
+
+<head>
+    <script>
+        const CreateTable = () => {
+            console.log("CreateFunction")
+            const table = document.createElement("table")
+            table.id = "myTable"
+            document.body.appendChild(table)
+            const valuesArray = [
+                [["name", "phone", "email", "postalZip", "region", "country"], true],
+                [["Heather Rasmussen","1-446-322-5485","vitae.odio@yahoo.ca","6951-0216","KwaZulu-Natal","Australia"], false],
+                [["Janna Franco","1-368-472-9720","enim.diam.vel@protonmail.org","5644","Leinster","Nigeria"], false]
+            ]
+
+            for (args of valuesArray) {
+                const th = CreateRow(args[0], isTh=args[1])   
+                table.appendChild(th)
+            }
+        }
+        const CreateRow = (values, isTh=false) => {
+            const row = document.createElement("tr")
+            console.log("values:", values)
+            for (value of values) {
+               let th
+                if (isTh) {
+                     th = document.createElement("th")
+                }
+                else {
+                     th = document.createElement("td")
+                }
+                row.appendChild(th)
+                th.innerText = value
+            }
+            return row
+        }
+
+    </script>
+
+</head>
+
+<body onload="CreateTable()">
+    <table>
+        <tr>
+            <th>name</th>
+            <th>phone</th>
+            <th>email</th>
+            <th>postalZip</th>
+            <th>region</th>
+            <th>country</th>
+        </tr>
+        <tr>
+            <td>Heather Rasmussen</td>
+            <td>1-446-322-5485</td>
+            <td>vitae.odio@yahoo.ca</td>
+            <td>6951-0216</td>
+            <td>KwaZulu-Natal</td>
+            <td>Australia</td>
+        </tr>
+        <tr>
+            <td>Janna Franco</td>
+            <td>1-368-472-9720</td>
+            <td>enim.diam.vel@protonmail.org</td>
+            <td>5644</td>
+            <td>Leinster</td>
+            <td>Nigeria</td>
+        </tr>
+        <tr>
+            <td>Delilah Dawson</td>
+            <td>(527) 224-8654</td>
+            <td>aenean.gravida@hotmail.ca</td>
+            <td>653457</td>
+            <td>San Andrés y Providencia</td>
+            <td>Nigeria</td>
+        </tr>
+        <tr>
+            <td>Deirdre Glenn</td>
+            <td>(867) 443-1301</td>
+            <td>sed.neque.sed@google.org</td>
+            <td>9288</td>
+            <td>Norte de Santander</td>
+            <td>Ukraine</td>
+        </tr>
+        <tr>
+            <td>Baker Dunlap</td>
+            <td>1-741-570-6948</td>
+            <td>sed@outlook.couk</td>
+            <td>35-65</td>
+            <td>Dōngběi</td>
+            <td>Norway</td>
+        </tr>
+    </table>
+</body>
+
+</html>

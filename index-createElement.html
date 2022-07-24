@@ -1,0 +1,19 @@
+<html>
+
+<head>
+    <script>
+        let a = 1, b = 2, c = 3
+        console.log(`a=${a}, b=${b}, c=${c}`)
+        function f() {
+            const h1 = document.createElement("h1")
+            h1.innerHTML = `a=${a}, b=${b}, c=${c}`
+            document.body.appendChild(h1)
+        }
+    </script>
+
+<body onload="f()">
+
+</body>
+</head>
+
+</html>

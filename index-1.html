@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <script>
+        let x = 11;
+        if (x < 10) {
+            console.log("A")
+        }
+        else if (x >= 10 || x < 20) {
+            console.log("B")
+
+        } else {
+            console.log("C")
+        }
+        let i = 0;
+        while (i < x) {
+            console.log(i);
+            i += 1;
+        }
+        for (i = 0; i < x; i+=3) {
+            console.log(`for ${i}`)
+        }
+
+        function Hello() {
+            let el = document.getElementById("Hello")
+            console.log(el)
+            
+            el.innerHTML="abc"
+        }
+
+        let Hello2 = () => {
+            let el = document.getElementById("Hello")
+            console.log(el)
+            
+            el.innerHTML="abc"
+        }
+    </script>
+</head>
+
+<body onload="Hello2()">
+
+    <h1 id="Hello">Hello World!
+
+    </h1>
+</body>
+
+</html>
