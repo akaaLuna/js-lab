@@ -2,46 +2,30 @@
 
 <head>
     <script>
-        const CreateTable = () => {
-            console.log("CreateFunction")
-            const table = document.createElement("table")
-            table.id = "myTable"
-            document.body.appendChild(table)
-            const valuesArray = [
-                [["name", "phone", "email", "postalZip", "region", "country"], true],
-                [["Heather Rasmussen","1-446-322-5485","vitae.odio@yahoo.ca","6951-0216","KwaZulu-Natal","Australia"], false],
-                [["Janna Franco","1-368-472-9720","enim.diam.vel@protonmail.org","5644","Leinster","Nigeria"], false]
-            ]
+        const f = () => { 
+            var rows = document.getElementsByClassName("my-row")
+            console.log (rows)
+            rows[0].bgColor="red"
+            var i =0
+            while (i<rows.length){
+                r = rows[i]
+                console.log("r",r)
 
-            for (args of valuesArray) {
-                const th = CreateRow(args[0], isTh=args[1])   
-                table.appendChild(th)
+                if (i % 2!=0){
+                    r.bgColor="blue"
+                }
+                
+                i++
             }
         }
-        const CreateRow = (values, isTh=false) => {
-            const row = document.createElement("tr")
-            console.log("values:", values)
-            for (value of values) {
-               let th
-                if (isTh) {
-                     th = document.createElement("th")
-                }
-                else {
-                     th = document.createElement("td")
-                }
-                row.appendChild(th)
-                th.innerText = value
-            }
-            return row
-        }
-
+        //    for (tr in  document.body.table.)
     </script>
 
 </head>
 
-<body onload="CreateTable()">
-    <table>
-        <tr>
+<body onload="f()">
+    <table id="my-table">
+        <tr class="my-row">
             <th>name</th>
             <th>phone</th>
             <th>email</th>
@@ -49,7 +33,7 @@
             <th>region</th>
             <th>country</th>
         </tr>
-        <tr>
+        <tr class="my-row">
             <td>Heather Rasmussen</td>
             <td>1-446-322-5485</td>
             <td>vitae.odio@yahoo.ca</td>
@@ -57,7 +41,7 @@
             <td>KwaZulu-Natal</td>
             <td>Australia</td>
         </tr>
-        <tr>
+        <tr class="my-row">
             <td>Janna Franco</td>
             <td>1-368-472-9720</td>
             <td>enim.diam.vel@protonmail.org</td>
@@ -65,7 +49,7 @@
             <td>Leinster</td>
             <td>Nigeria</td>
         </tr>
-        <tr>
+        <tr class="my-row">
             <td>Delilah Dawson</td>
             <td>(527) 224-8654</td>
             <td>aenean.gravida@hotmail.ca</td>
@@ -73,7 +57,7 @@
             <td>San Andrés y Providencia</td>
             <td>Nigeria</td>
         </tr>
-        <tr>
+        <tr class="my-row">
             <td>Deirdre Glenn</td>
             <td>(867) 443-1301</td>
             <td>sed.neque.sed@google.org</td>
@@ -81,7 +65,7 @@
             <td>Norte de Santander</td>
             <td>Ukraine</td>
         </tr>
-        <tr>
+        <tr class="my-row">
             <td>Baker Dunlap</td>
             <td>1-741-570-6948</td>
             <td>sed@outlook.couk</td>
