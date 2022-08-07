@@ -1,0 +1,79 @@
+<html>
+
+<head>
+    <script>
+        const f = () => { 
+            var rows = document.getElementsByClassName("my-row")
+            console.log (rows)
+            rows[0].bgColor="red"
+            var i =0
+            while (i<rows.length){
+                r = rows[i]
+                console.log("r",r)
+
+                if (i % 2!=0){
+                    r.bgColor="blue"
+                }
+                
+                i++
+            }
+        }
+        //    for (tr in  document.body.table.)
+    </script>
+
+</head>
+
+<body onload="f()">
+    <table id="my-table">
+        <tr class="my-row">
+            <th>name</th>
+            <th>phone</th>
+            <th>email</th>
+            <th>postalZip</th>
+            <th>region</th>
+            <th>country</th>
+        </tr>
+        <tr class="my-row">
+            <td>Heather Rasmussen</td>
+            <td>1-446-322-5485</td>
+            <td>vitae.odio@yahoo.ca</td>
+            <td>6951-0216</td>
+            <td>KwaZulu-Natal</td>
+            <td>Australia</td>
+        </tr>
+        <tr class="my-row">
+            <td>Janna Franco</td>
+            <td>1-368-472-9720</td>
+            <td>enim.diam.vel@protonmail.org</td>
+            <td>5644</td>
+            <td>Leinster</td>
+            <td>Nigeria</td>
+        </tr>
+        <tr class="my-row">
+            <td>Delilah Dawson</td>
+            <td>(527) 224-8654</td>
+            <td>aenean.gravida@hotmail.ca</td>
+            <td>653457</td>
+            <td>San Andrés y Providencia</td>
+            <td>Nigeria</td>
+        </tr>
+        <tr class="my-row">
+            <td>Deirdre Glenn</td>
+            <td>(867) 443-1301</td>
+            <td>sed.neque.sed@google.org</td>
+            <td>9288</td>
+            <td>Norte de Santander</td>
+            <td>Ukraine</td>
+        </tr>
+        <tr class="my-row">
+            <td>Baker Dunlap</td>
+            <td>1-741-570-6948</td>
+            <td>sed@outlook.couk</td>
+            <td>35-65</td>
+            <td>Dōngběi</td>
+            <td>Norway</td>
+        </tr>
+    </table>
+</body>
+
+</html>
