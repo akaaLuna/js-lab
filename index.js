@@ -1,25 +1,31 @@
-console.log("a");
-
-var items = [123, 456];
-
-for (let item in items) {
-  console.log(item);
+function log(args) {
+    console.log(args)
 }
-for (let item of items) {
-  console.log(item);
-}
-var i = 0;
-while (i < items.length) {
-  console.log(`while ${items[i]}`);
+log("abc")
+const items = ["a", "b", "c"]
 
-  i++;
+log("for of")
+for (item of items) {
+    log(item)
 }
-for (let i = 0; i < items.length; i++) {
-  console.log(`canonical for ${items[i]}`, items[i]);
+log("for in")
+for (index in items) {
+    log(index)
 }
-
-i = 0;
+log(" for canonical")
+for (var i = 0; i < items.length; i++) {
+    log(items[i])
+}
+log("while")
+var j = 0
+while (j < items.length) {
+    log(items[j])
+    j++
+}
+log("do while")
+var k = 0;
 do {
-  console.log(`do-while ${items[i]}`);
-  i++;
-} while (i < items.length);
+
+    log(items[k])
+    k++
+} while (k < items.length)
