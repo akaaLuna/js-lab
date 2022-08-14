@@ -1,40 +1,25 @@
-const result = []
+const items = ["a", "b", "c"]
 
-const numbers = [0, 1, 2, 3, 4]
-for (item of numbers) {
-    result.push(item);
+for (item of items) {
+    console.log(item)
 }
-console.log(result)
-
-
-for (index in numbers) {
-    item = numbers[index] + 5
-    result.push(item)
-
+for (item in items) {
+    console.log(item)
 }
-console.log(result)
-
-for (var i = 0; i < numbers.length; i++) {
-    item = numbers[i] +10
-result.push(item)
-
+for (i = 0; i < items.length; i++) {
+    console.log(items[i])
 }
-console.log(result)
-
-var x =  0
-while (x < numbers.length){
-    item = numbers[x] +15
-    result.push(item)
-    x++
+console.log ("while")
+var j = 0
+while (
+    j < items.length
+) {
+    console.log(items[j])
+    j++
 }
-console.log(result)
-
-var j= 0
-do { 
-
+var k = 0
+do{
     
-   item = numbers[j] +20
-   result.push(item) 
-   j++
-} while (j<numbers.length)
-console.log(result)
+    console.log(items[k])
+    k++
+}while(k<items.length)
